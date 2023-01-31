@@ -1,8 +1,9 @@
 package com.example.di.springbootdi.models.services;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
-
-@Service("miServicioPrincipal")
+//@Primary
+//@Service("miServicioPrincipal")
 public class MiServicio implements IServicio{
     @Override
     public String operacion(){
