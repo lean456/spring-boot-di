@@ -2,8 +2,12 @@ package com.example.di.springbootdi.models.domain;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.ApplicationScope;
+import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Component
+@RequestScope
 public class Cliente {
     @Value("${cliente.nombre}")
     private String nombre;

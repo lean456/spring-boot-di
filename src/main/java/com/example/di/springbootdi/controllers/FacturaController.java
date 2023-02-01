@@ -1,6 +1,7 @@
 package com.example.di.springbootdi.controllers;
 
 import com.example.di.springbootdi.models.domain.Factura;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +14,7 @@ public class FacturaController {
     @Autowired
     private Factura factura;
     @GetMapping("/ver")
-    public String ver(Model model){
+    public String ver(@NotNull Model model){
         model.addAttribute("titulo","Ejemplo factura con inyeccion de dependencia");
         model.addAttribute("factura",factura);
         return "factura/ver";
